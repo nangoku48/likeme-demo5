@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camera Collection | Selfie to Earn</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://xumm.app/assets/cdn/xumm.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div style="display:flex; align-items:center; gap:15px;">
+        <a href="../index.html" class="nav-back" style="color:#ccc; text-decoration:none; font-weight:bold;">← HOME</a>
+        <div class="logo">📸 Selfie to Earn</div>
+      </div>
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <div id="walletStatus" class="status-badge" style="display:none;">未接続</div>
+        <button id="logoutBtn" class="status-badge" style="display:none; cursor:pointer; background:rgba(255, 59, 48, 0.2); color:#ff3b30; border:none;">切断</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero-section">
+        <h1>Genesis Collection</h1>
+        <p>限定30台。初期モデルのカメラNFTを手に入れよう。<br>価格: <span style="color:#3b82f6; font-weight:bold;">10 XRP</span> (Testnet)</p>
+      </div>
+
+      <div id="nftGrid" class="nft-grid">
+        </div>
+    </main>
+  </div>
+
+</body>
+</html>

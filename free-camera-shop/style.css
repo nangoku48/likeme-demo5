@@ -1,0 +1,141 @@
+:root {
+  --bg: #0f1115;
+  --card: #1a1d24;
+  --primary: #3b82f6;
+  --accent: #8b5cf6;
+  --text: #ffffff;
+  --text-sub: #9ca3af;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.status-badge {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.connect { background: white; color: black; }
+.logout { background: rgba(255,255,255,0.1); color: #ff4d4d; }
+
+/* Hero */
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.hero-section h1 { font-size: 2.5rem; margin-bottom: 10px; }
+.hero-section p { color: var(--text-sub); }
+
+/* Grid Layout */
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.nft-card {
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform 0.2s;
+}
+.nft-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.nft-img-wrapper {
+  position: relative;
+  height: 200px;
+}
+.nft-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.badge-id {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.7);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.nft-info {
+  padding: 15px;
+}
+.nft-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+.nft-price {
+  color: var(--text-sub);
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.btn-buy {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-buy:hover { background: #2563eb; }
+.btn-buy:disabled { background: #333; color: #666; cursor: not-allowed; }
