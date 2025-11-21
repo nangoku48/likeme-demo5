@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whitepaper | LikeMe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="doc-header">
+      <div style="text-align:left; margin-bottom:20px;">
+        <a href="index.html" class="nav-back"><span>←</span> HOME</a>
+      </div>
+      <h1 class="doc-title">WHITEPAPER</h1>
+      <p>プロジェクト概要・仕様書</p>
+    </div>
+
+    <div class="doc-section">
+      <h2>🧩 プロジェクト概要</h2>
+      <h3>コンセプト</h3>
+      <p>SNPITのSnap-to-Earnモデルを踏襲し、「写真 → セルフィー動画」に転換。<br>
+      ユーザーの“本人性”を重視し、セルフィー投稿 × バトル × SNS連携 × Earn のシンプルな構成。</p>
+      
+      <h3>プロジェクト目的</h3>
+      <ul>
+        <li>SNS投稿文化を「報酬化」する</li>
+        <li>若年層向けに「動画 × Earn × 出会い要素」を融合</li>
+        <li>低予算から開始し、NFT初期販売で資金を確保</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h2>🔩 コア機能一覧</h2>
+      <table class="doc-table">
+        <tr><th>機能カテゴリ</th><th>内容</th></tr>
+        <tr><td>ユーザー登録</td><td>Wallet接続 / SNS連携（X, Insta, TikTok）</td></tr>
+        <tr><td>撮影機能</td><td>アプリ内カメラで10秒動画撮影（AI検知で本人判定）</td></tr>
+        <tr><td>投稿</td><td>撮影動画をバトルへ送信</td></tr>
+        <tr><td>バトル</td><td>2動画を自動マッチング→投票数で勝敗決定</td></tr>
+        <tr><td>トークン</td><td>LMP（ポイント）/ LMT（ERC-20トークン）</td></tr>
+        <tr><td>NFT</td><td>Camera NFT（ERC-721）</td></tr>
+        <tr><td>セーフガード</td><td>AI生成検出 / 年齢制限 / 不正投稿BAN</td></tr>
+      </table>
+    </div>
+
+    <div class="doc-section">
+      <h2>💸 マネタイズ設計</h2>
+      <table class="doc-table">
+        <tr><th>項目</th><th>説明</th></tr>
+        <tr><td>NFT販売</td><td>初期収益源。カメラNFT販売</td></tr>
+        <tr><td>手数料</td><td>LMP→LMT交換時 5%</td></tr>
+        <tr><td>出金</td><td>トークン出金時 3%</td></tr>
+        <tr><td>マーケット</td><td>動画NFT販売時 10%</td></tr>
+        <tr><td>バトル参加費</td><td>1〜5 LMP</td></tr>
+        <tr><td>サブスク</td><td>プレミアム会員（$10/月）</td></tr>
+      </table>
+    </div>
+
+    <div class="doc-section">
+      <h2>🚀 ロードマップ</h2>
+      <ul>
+        <li><strong>Phase 1 (0-3ヶ月):</strong> NFT販売・テスト版App開発</li>
+        <li><strong>Phase 2 (4-6ヶ月):</strong> β版リリース（撮影・投稿・バトル）</li>
+        <li><strong>Phase 3 (6-9ヶ月):</strong> トークン導入・ポイント変換実装</li>
+        <li><strong>Phase 4 (9-12ヶ月):</strong> SNSキャンペーン・スポンサー導入</li>
+        <li><strong>Phase 5 (12ヶ月〜):</strong> DAO構想・トークン上場</li>
+      </ul>
+    </div>
+
+    <div class="doc-section">
+      <h2>🧑‍💻 エンジニアリング仕様</h2>
+      <p><strong>目的:</strong> SNPIT構造のセルフィー動画版</p>
+      <p><strong>開発対象:</strong></p>
+      <ul>
+        <li>Camera NFT機能（ERC-721）</li>
+        <li>動画撮影・アップロード・投票機能</li>
+        <li>Web3ウォレット連携 (XRPL / EVM)</li>
+        <li>LMPトークン管理・変換処理</li>
+        <li>SNS OAuth連携（Insta/X/TikTok）</li>
+        <li>AI生成判定API（例：Hive Moderation）</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

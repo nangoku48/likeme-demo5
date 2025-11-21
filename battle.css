@@ -1,0 +1,114 @@
+/* battle.css */
+
+/* 全幅コンテナ */
+.container-full {
+  max-width: 1400px; /* 画面いっぱいに広げる */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ヘッダー */
+.battle-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border);
+}
+.battle-title { font-size: 2rem; font-weight: 900; color: var(--primary); text-shadow: 0 0 15px var(--primary-glow); margin: 0; }
+.battle-status { display: flex; gap: 15px; align-items: center; }
+.status-badge.live { background: var(--primary); color: white; animation: pulse 1.5s infinite; }
+.time-left { font-family: monospace; font-weight: bold; color: #fff; }
+
+@keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
+
+/* 説明エリア */
+.battle-intro {
+  text-align: center; margin-bottom: 40px; color: var(--text-sub); font-size: 1.1rem;
+}
+.battle-intro strong { color: white; font-size: 1.3rem; }
+
+/* --- リーダーボード・グリッド --- */
+.leaderboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* 12分割グリッド */
+  gap: 15px;
+  grid-auto-flow: dense; /* 空きスペースを詰める */
+}
+
+/* グリッドアイテム共通設定 */
+.grid-item {
+  position: relative; border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--border); transition: 0.3s;
+}
+.grid-item:hover { border-color: var(--primary); transform: scale(1.02); z-index: 10; }
+.grid-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* --- ランク別サイズ設定 --- */
+
+/* 1位 (特大: 6列x2行) */
+.rank-1 { grid-column: span 6; grid-row: span 2; border: 2px solid #ffd700; box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); }
+/* 2位 (大: 3列x2行) */
+.rank-2 { grid-column: span 3; grid-row: span 2; border: 2px solid #c0c0c0; box-shadow: 0 0 20px rgba(192, 192, 192, 0.3); }
+/* 3位 (大: 3列x2行) */
+.rank-3 { grid-column: span 3; grid-row: span 2; border: 2px solid #cd7f32; box-shadow: 0 0 20px rgba(205, 127, 50, 0.3); }
+
+/* 4位〜10位 (中: 2列x1行) */
+.rank-mid { grid-column: span 2; }
+
+/* 11位〜 (小: 1列x1行) */
+.rank-low { grid-column: span 1; height: 100px; } /* 高さを固定 */
+.rank-danger { grid-column: span 1; height: 80px; border-color: #ff3b30; }
+
+/* --- バッジと投票ボタン --- */
+.rank-badge {
+  position: absolute; top: 10px; left: 10px; padding: 5px 12px;
+  font-weight: 900; border-radius: 20px; background: rgba(0,0,0,0.8); color: white;
+}
+.rank-badge.gold { background: #ffd700; color: black; }
+.rank-badge.silver { background: #c0c0c0; color: black; }
+.rank-badge.bronze { background: #cd7f32; color: black; }
+.rank-badge.low { padding: 2px 8px; font-size: 0.8rem; }
+.rank-badge.danger { background: #ff3b30; }
+
+.vote-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 20px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.vote-info.small { padding: 10px; }
+
+.votes { font-weight: bold; font-size: 1.2rem; }
+.vote-info.small .votes { font-size: 0.9rem; }
+
+.btn-vote-neon {
+  background: var(--primary); color: white; border: none; padding: 10px 20px;
+  font-weight: bold; border-radius: 30px; cursor: pointer;
+  box-shadow: 0 0 15px var(--primary-glow); transition: 0.2s;
+}
+.btn-vote-neon:hover { background: var(--primary-hover); transform: scale(1.1); }
+
+.btn-vote-small {
+  background: rgba(255,255,255,0.2); color: white; border: 1px solid white;
+  padding: 4px 10px; font-size: 0.7rem; border-radius: 20px; cursor: pointer;
+}
+.btn-vote-small:hover { background: var(--primary); border-color: var(--primary); }
+
+/* 脱落ゾーン */
+.danger-zone-title {
+  grid-column: 1 / -1; /* 横幅いっぱい */
+  text-align: center; color: #ff3b30; font-weight: bold; margin: 30px 0 10px;
+  border-top: 2px dashed #ff3b30; padding-top: 20px;
+}
+.grayscale { filter: grayscale(100%); opacity: 0.5; }
+.eliminated {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg);
+  color: #ff3b30; font-weight: 900; font-size: 1.5rem; border: 3px solid #ff3b30; padding: 5px 20px;
+  text-transform: uppercase;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .leaderboard-grid { grid-template-columns: repeat(6, 1fr); } /* スマホは6分割 */
+  .rank-1 { grid-column: span 6; }
+  .rank-2, .rank-3 { grid-column: span 3; }
+  .rank-mid { grid-column: span 3; }
+  .rank-low, .rank-danger { grid-column: span 2; }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LikeMe | Web3 Social Reward</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://xumm.app/assets/cdn/xumm.min.js"></script>
+  <script src="lang.js"></script>
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body class="landing">
+  <div class="container">
+    
+    <header class="landing-header">
+      <div class="logo-area">
+        <span style="font-size:1.5rem; font-weight:900; color:white;">LikeMe</span>
+        <span style="background:#ff33cc; color:white; padding:2px 6px; font-size:0.7rem; border-radius:4px; margin-left:8px;">Beta</span>
+      </div>
+      <div class="wallet-status-area">
+        <span id="connectedAddress" class="status-badge">未接続</span>
+      </div>
+    </header>
+
+    <div class="hero-wrapper">
+      
+      <div class="hero-text">
+        <h1 class="main-title" id="heroTitle">
+          <span class="text-gradient">LIKE</span> が<br>価値に変わる。
+        </h1>
+        <p class="sub-text" id="heroSub">
+          写真を投稿して稼ぐ、投票して稼ぐ。<br>
+          クリエイターもファンも報酬がもらえる<br>
+          次世代のソーシャルリワードプラットフォーム。
+        </p>
+        
+        <div class="action-buttons">
+          <button id="connectBtn" class="btn-neon">⚡ ウォレット接続して始める</button>
+          <button id="logoutBtn" class="btn-outline" style="display:none;">ログアウト</button>
+        </div>
+        
+        <p class="note">※ XRP Ledger Testnet で動作します</p>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/header-top.png" alt="LikeMe Visual">
+        <div class="glow-effect"></div>
+      </div>
+
+    </div>
+
+    <div class="menu-section">
+      <h2 class="menu-title">CONTENTS</h2>
+      <div class="menu-grid">
+        
+        <a href="profile.html" class="menu-card">
+          <span class="material-icons-round icon">person</span>
+          <h3>MY PAGE</h3>
+          <p>プロフィール・投稿管理</p>
+        </a>
+
+        <a href="free-camera-shop/index.html" class="menu-card">
+          <span class="material-icons-round icon">shopping_cart</span>
+          <h3>SHOP</h3>
+          <p>カメラNFTを購入 (Free Mint)</p>
+        </a>
+
+        <a href="tutorial.html" class="menu-card">
+          <span class="material-icons-round icon">school</span>
+          <h3>TUTORIAL</h3>
+          <p>遊び方・稼ぎ方ガイド</p>
+        </a>
+
+        <a href="docs.html" class="menu-card">
+          <span class="material-icons-round icon">description</span>
+          <h3>DOCS</h3>
+          <p>ホワイトペーパー・仕様</p>
+        </a>
+
+        <div class="menu-card disabled" onclick="alert('Coming Soon!\n現在開発中です。')">
+          <span class="material-icons-round icon">storefront</span>
+          <h3>MARKET</h3>
+          <p>Coming Soon</p>
+        </div>
+
+        <a href="battle.html" class="menu-card">
+          <span class="material-icons-round icon">sports_esports</span>
+          <h3>BATTLE</h3>
+          <p>全員参加！生き残りバトル</p>
+        </a>
+
+      </div>
+    </div>
+    
+  </div>
+</body>
+</html>

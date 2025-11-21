@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | LikeMe</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://xumm.app/assets/cdn/xumm.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body class="profile-page">
+
+  <div class="container">
+   <header class="page-header">
+      <div style="display:flex; align-items:center; gap:15px;">
+        <a href="index.html" class="nav-back"><span>←</span> HOME</a>
+        <div class="logo" style="font-size:1.5rem; color:white;">LikeMe <span style="color:#ff33cc; font-size:0.8rem;">Beta</span></div>
+      </div>
+      <div class="header-actions">
+        <div id="walletStatus" class="status-badge" style="display:none;">未接続</div>
+        <button id="logoutBtn" class="btn-outline" style="display:none;">Log Out</button>
+      </div>
+    </header>
+
+    <section class="profile-header">
+      <div class="profile-avatar">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80" alt="Avatar">
+      </div>
+      <div class="profile-info">
+        <h1>My Account <span class="handle">@your_account</span></h1>
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span class="stat-value">12</span>
+            <span class="stat-label">Posts</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value">2.5k</span>
+            <span class="stat-label">Total Votes</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-value" style="color:#ff33cc;">$280</span>
+            <span class="stat-label">Earnings</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <div class="section-title" style="margin-bottom:20px; font-weight:bold;">My Posts</div>
+      <div class="nft-grid">
+        </div>
+    </main>
+    
+    <div style="text-align:center; margin-top:40px;">
+        <a href="index.html" style="color:#666; font-size:0.9rem;">← Back to Home</a>
+    </div>
+  </div>
+
+</body>
+</html>
